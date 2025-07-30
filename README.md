@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="flowgentic" height="200px" src="./img/Flowgentic-logo.png">
+  <img alt="flowgentic" height="200px" src="./img/flowgentic-logo.png">
   <h1>Flowgentic AI</h1>
   <p>✨ <b>Low code tool to rapidly build and coordinate multi-agent teams</b> ✨</p>
 </div>
