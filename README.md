@@ -10,48 +10,13 @@
     <figcaption>Build a multi-agent team like this with simple drag and drop in minutes! 🤩</figcaption>
 </figure>
 
-> [!TIP]
-> Prefer to write code instead? Check out [Rojak](https://github.com/StreetLamb/rojak) — a Python library designed to orchestrate durable, fault-tolerant multi-agent workflows with ease!
-
 > [!WARNING]
 > This project is NOT affiliated with any blockchain-related projects in any way. Be cautious of scammers falsely claiming association. Stay vigilant!
-
-## Table of Contents
-- [Table of Contents](#table-of-contents)
-- [What is Tribe?](#what-is-tribe)
-- [What are some use cases?](#what-are-some-use-cases)
-- [Highlights](#highlights)
-- [How to get started](#how-to-get-started)
-  - [Generate Secret Keys](#generate-secret-keys)
-  - [Deploy Tribe locally with Docker (simplest way)](#deploy-tribe-locally-with-docker-simplest-way)
-  - [Deploy Tribe on a remote server](#deploy-tribe-on-a-remote-server)
-- [Guides and concepts](#guides-and-concepts)
-  - [Sequential vs Hierarchical workflows](#sequential-vs-hierarchical-workflows)
-    - [Sequential workflows](#sequential-workflows)
-    - [Hierarchical workflows](#hierarchical-workflows)
-  - [Skills](#skills)
-    - [Create a Skill Using Skill Definitions](#create-a-skill-using-skill-definitions)
-    - [Writing a Custom Skill using LangChain](#writing-a-custom-skill-using-langchain)
-  - [Retrieval Augmented Generation (RAG)](#retrieval-augmented-generation-rag)
-    - [Customising embedding models](#customising-embedding-models)
-  - [Using Open Source Models](#using-open-source-models)
-    - [Using Open Source Models with Ollama](#using-open-source-models-with-ollama)
-    - [Choosing the Right Models](#choosing-the-right-models)
-    - [Using Open Source Models without Ollama](#using-open-source-models-without-ollama)
-  - [Guides](#guides)
-    - [Creating Your First Hierarchical Team](#creating-your-first-hierarchical-team)
-    - [Equipping Your Team Member with Skills](#equipping-your-team-member-with-skills)
-    - [Creating Your First Sequential Team](#creating-your-first-sequential-team)
-    - [Requiring Human Approval Before Skill Execution in Sequential Workflows](#requiring-human-approval-before-skill-execution-in-sequential-workflows)
-- [Contribution](#contribution)
-- [Release Notes](#release-notes)
-- [License](#license)
-
 
 > [!WARNING]
 > This project is currently under heavy development. Please be aware that significant changes may occur.
 
-## What is Tribe?
+## What is Flowgentic?
 Have you heard the saying, 'Two minds are better than one'? That's true for agents too. Tribe leverages on the langgraph framework to let you customize and coordinate teams of agents easily. By splitting up tough tasks among agents that are good at different things, each one can focus on what it does best. This makes solving problems faster and better.
 
 
@@ -178,11 +143,6 @@ If your skill involves performing an HTTP request to fetch or update data, using
 | `param > enum`           | Optionally, include an array to restrict the agent to select from predefined values.                                                                                       |
 | `parameters > required`  | Lists the parameters that are required, ensuring they are always included in the API request.                                                                              |
 
-#### Writing a Custom Skill using LangChain
-
-For more intricate tasks that extend beyond simple HTTP requests, LangChain allows you to develop more advanced tools. You can integrate these tools into Tribe by adding them to the [`managed_skills` dictionary](https://github.com/streetlamb/tribe/blob/master/backend/app/core/graph/skills/__init__.py). For a practical example, refer to the [demo calculator tool](https://github.com/streetlamb/tribe/blob/master/backend/app/core/graph/skills/calculator.py). To learn how to create a LangChain tool, please consult their [documentation](https://python.langchain.com/v0.2/docs/how_to/custom_tools/).
-
-After creating a new tool, restart the application to ensure the tool is properly loaded into the database. Likewise, if you need to remove a tool, simply delete it from the `managed_skills` dictionary and restart the application to ensure it is removed from the database. Do note that tools created this way are available to all users in your application.
 
 ### Retrieval Augmented Generation (RAG)
 
