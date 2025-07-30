@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="flowgentic" height="200px" src="./img/tribe-logo.png">
+  <img alt="flowgentic" height="200px" src="./img/Flowgentic-logo.png">
   <h1>Flowgentic AI</h1>
   <p>✨ <b>Low code tool to rapidly build and coordinate multi-agent teams</b> ✨</p>
 </div>
@@ -17,7 +17,7 @@
 > This project is currently under heavy development. Please be aware that significant changes may occur.
 
 ## What is Flowgentic?
-Have you heard the saying, 'Two minds are better than one'? That's true for agents too. Tribe leverages on the langgraph framework to let you customize and coordinate teams of agents easily. By splitting up tough tasks among agents that are good at different things, each one can focus on what it does best. This makes solving problems faster and better.
+Have you heard the saying, 'Two minds are better than one'? That's true for agents too. Flowgentic leverages on the langgraph framework to let you customize and coordinate teams of agents easily. By splitting up tough tasks among agents that are good at different things, each one can focus on what it does best. This makes solving problems faster and better.
 
 
 ## What are some use cases?
@@ -35,8 +35,8 @@ and many many more!
 -  **Retrieval Augmented Generation**: Enable your agents to reason with your internal knowledge base.
 - **Human-In-The-Loop**: Enable human approval before tool calling.
 - **Open Source Models**: Use open-source LLM models such as llama, Gemma and Phi.
-- **Integrate Tribe with external application**: Use Tribe's public API endpoints to interact with your teams.
-- **Easy Deployment**: Deploy Tribe effortlessly using Docker.
+- **IntegrateFlowgentic  with external application**: Use Flowgentic's public API endpoints to interact with your teams.
+- **Easy Deployment**: Deploy Flowgentic effortlessly using Docker.
 - **Multi-Tenancy**: Manage and support multiple users and teams.
 
 ## How to get started
@@ -88,7 +88,7 @@ Use this if:
 
 ### Skills
 
-Skills are abilities that you can equip your agents with to interact with the world. For example, you can provide your agent with the skill to check the current weather condition or search the web for the latest news. By default, Tribe provides three skills:
+Skills are abilities that you can equip your agents with to interact with the world. For example, you can provide your agent with the skill to check the current weather condition or search the web for the latest news. By default, Flowgentic provides three skills:
 
 - **duckduckgo-search**: Performs web searches.
 - **wikipedia**: Searches Wikipedia for information.
@@ -98,7 +98,7 @@ You will likely want to create custom skills, which can be done in two ways: by 
 
 #### Create a Skill Using Skill Definitions
 
-If your skill involves performing an HTTP request to fetch or update data, using skill definitions is the simplest approach. In Tribe, start by navigating to the 'Skills' tab and clicking the 'Add Skill' button. You will then be prompted to provide the skill definition, which instructs your agent on how to execute the specific skill. This definition should be structured as follows:
+If your skill involves performing an HTTP request to fetch or update data, using skill definitions is the simplest approach. In Flowgentic, start by navigating to the 'Skills' tab and clicking the 'Add Skill' button. You will then be prompted to provide the skill definition, which instructs your agent on how to execute the specific skill. This definition should be structured as follows:
 
 ```json
 {
@@ -146,11 +146,11 @@ If your skill involves performing an HTTP request to fetch or update data, using
 
 ### Retrieval Augmented Generation (RAG)
 
-RAG is a technique for augmenting your agents' knowledge with additional data. Agents can reason about a wide range of topics, but their knowledge is limited to public data up to the point in time they were trained on. If you want your agents to reason about private data, Tribe allows you to upload your data and select which data to include in your agent's knowledge base. This enables your agents to reason with the selected data and allows you to create different agents with specialized knowledge.
+RAG is a technique for augmenting your agents' knowledge with additional data. Agents can reason about a wide range of topics, but their knowledge is limited to public data up to the point in time they were trained on. If you want your agents to reason about private data, Flowgentic allows you to upload your data and select which data to include in your agent's knowledge base. This enables your agents to reason with the selected data and allows you to create different agents with specialized knowledge.
 
 #### Customising embedding models
 
-By default, Tribe uses `BAAI/bge-small-en-v1.5`, which is a light and fast English embedding model that is better than `OpenAI Ada-002`. If your documents are multilingual or require image embedding, you may want to use another embedding model. You can easily do this by changing `DENSE_EMBEDDING_MODEL` in your `.env` file:
+By default, Flowgentic uses `BAAI/bge-small-en-v1.5`, which is a light and fast English embedding model that is better than `OpenAI Ada-002`. If your documents are multilingual or require image embedding, you may want to use another embedding model. You can easily do this by changing `DENSE_EMBEDDING_MODEL` in your `.env` file:
 
 ```bash
 # See the list of supported models: https://qdrant.github.io/fastembed/examples/Supported_Models/
@@ -162,7 +162,7 @@ DENSE_EMBEDDING_MODEL=BAAI/bge-small-en-v1.5 # Change this
 
 ### Using Open Source Models
 
-Open source models are becoming cheaper and easier to run, and some even match the performance of closed models. You might prefer using them for their privacy and cost benefits. If you are running Tribe locally and want to use open source models, I would recommend Ollama for its ease of use.
+Open source models are becoming cheaper and easier to run, and some even match the performance of closed models. You might prefer using them for their privacy and cost benefits. If you are running Flowgentic locally and want to use open source models, I would recommend Ollama for its ease of use.
 
 #### Using Open Source Models with Ollama
 1. **Install Ollama:** First, set up Ollama on your device. You can find the instructions in [Ollama's repo](https://github.com/ollama/ollama).
@@ -170,7 +170,7 @@ Open source models are becoming cheaper and easier to run, and some even match t
 3. **Configure your agents:**
    - Update the agent's provider to `ollama`.
    - Paste the downloaded model's name (e.g., `llama3.1:8b`) into the model input field.
-   - By default, Tribe will run on `http://host.docker.internal:11434`, which maps to `https://localhost:11434`. This setup allows Tribe to communicate with the default Ollama host. If your setup uses a different host, specify the new host in the 'Base URL' input field.
+   - By default, Flowgentic will run on `http://host.docker.internal:11434`, which maps to `https://localhost:11434`. This setup allows Flowgentic to communicate with the default Ollama host. If your setup uses a different host, specify the new host in the 'Base URL' input field.
 
 #### Choosing the Right Models
 There are hundreds of open source models in [Ollama's library](https://ollama.com/library) suitable for different tasks. Here's how to choose the right one for your use case:
